@@ -1,0 +1,141 @@
+Microsoft Windows [Version 10.0.19041.630]
+(c) 2020 Microsoft Corporation. All rights reserved.
+
+C:\Users\User>cd documents
+
+C:\Users\User\Documents>cd coursera
+
+C:\Users\User\Documents\Coursera>cd hcjs
+
+C:\Users\User\Documents\Coursera\HCJS>cd amacodes
+
+C:\Users\User\Documents\Coursera\HCJS\amaCodes>git clone https://github.com/pacomesimon/coursera-test.git
+Cloning into 'coursera-test'...
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (5/5), done.
+Receiving objects: 100% (8/8), done.
+Resolving deltas: 100% (1/1), done.
+remote: Total 8 (delta 1), reused 0 (delta 0), pack-reused 0
+
+C:\Users\User\Documents\Coursera\HCJS\amaCodes>dir
+ Volume in drive C is Windows
+ Volume Serial Number is A49F-962B
+
+ Directory of C:\Users\User\Documents\Coursera\HCJS\amaCodes
+
+05/01/2021  10:03 AM    <DIR>          .
+05/01/2021  10:03 AM    <DIR>          ..
+05/01/2021  10:03 AM    <DIR>          coursera-test
+               0 File(s)              0 bytes
+               3 Dir(s)  104,619,073,536 bytes free
+
+C:\Users\User\Documents\Coursera\HCJS\amaCodes>cd coursera-test
+
+C:\Users\User\Documents\Coursera\HCJS\amaCodes\coursera-test>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+C:\Users\User\Documents\Coursera\HCJS\amaCodes\coursera-test>git checkout gh-pages
+Switched to a new branch 'gh-pages'
+Branch 'gh-pages' set up to track remote branch 'gh-pages' from 'origin'.
+
+C:\Users\User\Documents\Coursera\HCJS\amaCodes\coursera-test>git status
+On branch gh-pages
+Your branch is up to date with 'origin/gh-pages'.
+
+nothing to commit, working tree clean
+
+C:\Users\User\Documents\Coursera\HCJS\amaCodes\coursera-test>dir
+ Volume in drive C is Windows
+ Volume Serial Number is A49F-962B
+
+ Directory of C:\Users\User\Documents\Coursera\HCJS\amaCodes\coursera-test
+
+05/01/2021  10:05 AM    <DIR>          .
+05/01/2021  10:05 AM    <DIR>          ..
+05/01/2021  10:05 AM             1,339 index.md
+05/01/2021  10:05 AM                26 _config.yml
+               2 File(s)          1,365 bytes
+               2 Dir(s)  104,618,688,512 bytes free
+
+C:\Users\User\Documents\Coursera\HCJS\amaCodes\coursera-test>mkdir site
+
+C:\Users\User\Documents\Coursera\HCJS\amaCodes\coursera-test>cd site
+
+C:\Users\User\Documents\Coursera\HCJS\amaCodes\coursera-test\site>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\User\Documents\Coursera\HCJS\amaCodes\coursera-test\site>dir
+ Volume in drive C is Windows
+ Volume Serial Number is A49F-962B
+
+ Directory of C:\Users\User\Documents\Coursera\HCJS\amaCodes\coursera-test\site
+
+05/01/2021  10:08 AM    <DIR>          .
+05/01/2021  10:08 AM    <DIR>          ..
+05/01/2021  10:08 AM               125 index.html
+               1 File(s)            125 bytes
+               2 Dir(s)  104,616,996,864 bytes free
+
+C:\Users\User\Documents\Coursera\HCJS\amaCodes\coursera-test\site>git status
+On branch gh-pages
+Your branch is up to date with 'origin/gh-pages'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ./
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\User\Documents\Coursera\HCJS\amaCodes\coursera-test\site>cd ..
+
+C:\Users\User\Documents\Coursera\HCJS\amaCodes\coursera-test>git status
+On branch gh-pages
+Your branch is up to date with 'origin/gh-pages'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        site/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\User\Documents\Coursera\HCJS\amaCodes\coursera-test>git add .
+
+C:\Users\User\Documents\Coursera\HCJS\amaCodes\coursera-test>git status
+On branch gh-pages
+Your branch is up to date with 'origin/gh-pages'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   site/index.html
+
+
+C:\Users\User\Documents\Coursera\HCJS\amaCodes\coursera-test>git commit -m "myFirstPage"
+[gh-pages 9a5ba24] myFirstPage
+ 1 file changed, 9 insertions(+)
+ create mode 100644 site/index.html
+
+C:\Users\User\Documents\Coursera\HCJS\amaCodes\coursera-test>git status
+On branch gh-pages
+Your branch is ahead of 'origin/gh-pages' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\Users\User\Documents\Coursera\HCJS\amaCodes\coursera-test>git push
+info: please complete authentication in your browser...
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 444 bytes | 74.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/pacomesimon/coursera-test.git
+   63edab7..9a5ba24  gh-pages -> gh-pages
+
+C:\Users\User\Documents\Coursera\HCJS\amaCodes\coursera-test>
+
