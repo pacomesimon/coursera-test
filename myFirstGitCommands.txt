@@ -139,3 +139,27 @@ To https://github.com/pacomesimon/coursera-test.git
 
 C:\Users\User\Documents\Coursera\HCJS\amaCodes\coursera-test>
 
+
+
+
+
+
+
+C:\Users\User\Documents\Coursera\HCJS\amaCodes\coursera-test>cd site
+
+C:\Users\User\Documents\Coursera\HCJS\amaCodes\coursera-test\site>browser-sync start --server --directory --files "*"
+[Browsersync] Access URLs:
+ --------------------------------------
+       Local: http://localhost:3000
+    External: http://192.168.1.102:3000
+ --------------------------------------
+          UI: http://localhost:3001
+ UI External: http://localhost:3001
+ --------------------------------------
+[Browsersync] Serving files from: ./
+[Browsersync] Watching files...
+^CTerminate batch job (Y/N)? y
+
+C:\Users\User\Documents\Coursera\HCJS\amaCodes\coursera-test\site>
+
+
