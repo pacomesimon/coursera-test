@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>e2d822f79c6074a96e22ccb02a4c97b8</title>
+
+</head>
+
+
+
+<body>
+
+<script type="text/javascript">
+	
+	let laSensor = new LinearAccelerationSensor({frequency: 60});
+
+laSensor.addEventListener('reading', e => {
+  console.log("Linear acceleration along the X-axis " + laSensor.x);
+  console.log("Linear acceleration along the Y-axis " + laSensor.y);
+  console.log("Linear acceleration along the Z-axis " + laSensor.z);
+
+  document.write("Linear acceleration along the X-axis " + laSensor.x);
+  document.write("Linear acceleration along the Y-axis " + laSensor.y);
+  document.write("Linear acceleration along the Z-axis " + laSensor.z);
+
+
+
+});
+laSensor.start();
+
+
+
+</script>
+
+
+
+
+
+</body></html>
