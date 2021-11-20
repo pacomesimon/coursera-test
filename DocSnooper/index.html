@@ -59,6 +59,7 @@
 			    getPageText(pageNumber , PDFDocumentInstance).then(function(textPage){
 			        // Show the text of the page in the console
 			        console.log(textPage);
+			        document.getElementById('demo').innerHTML = textPage ;
 			    });
 
 			}, function (reason) {
@@ -67,5 +68,6 @@
 			});
 	</script>
 
+	<p id="demo"></p>
 </body>
 </html>
