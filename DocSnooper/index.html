@@ -11,12 +11,12 @@
 <body>
 <h1>buns, Hello Coursera!</h1>
 
-<script src="./pdfjs-dist-2.10.377/package/build/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.246/pdf.min.js"></script>
 <script>
 	    // Path to PDF file
 	    var PDF_URL = './example.pdf';
 	    // Specify the path to the worker
-	    PDFJS.workerSrc = './pdfjs-dist-2.10.377/package/build/pdf.worker.min.js';
+	    PDFJS.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.246/pdf.worker.min.js';
 
 		/**
 		 * Retrieves the text of a specif page within a PDF Document obtained through pdf.js 
