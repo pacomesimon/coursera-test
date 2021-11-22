@@ -71,11 +71,13 @@
 			    console.error(reason);
 			});
 
-		var totalPages = pageTexts.length - 1 ;
-		var textToShow = "<br>";
-		for (let i = 1; i <= totalPages ; i++) {
-			textToShow = textToShow + "<h1> page " + i +"</h1> <br>" + pageTexts[i] + "<br> ===================== <br>";
-			document.getElementById('demo').innerHTML = textToShow ;
+
+		document.getElementById('demo').innerHTML = "mi Array" + pageTexts;
+		// var totalPages = pageTexts.length - 1 ;
+		// var textToShow = "<br>";
+		// for (let i = 1; i <= totalPages ; i++) {
+		// 	textToShow = textToShow + "<h1> page " + i +"</h1> <br>" + pageTexts[i] + "<br> ===================== <br>";
+		// 	document.getElementById('demo').innerHTML = textToShow ;
 		}
 
 	</script>
