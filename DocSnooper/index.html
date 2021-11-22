@@ -52,6 +52,7 @@
 		window.pageTexts = [];
 		function pushToTheGlobal(pageNumber, textPage) {
 			window.pageTexts[pageNumber] = textPage;
+			console.log(window.pageTexts[pageNumber]);
 		}
 
 		
@@ -67,7 +68,7 @@
 			    	// window.textNeeded = "";
 				    getPageText(pageNumber , PDFDocumentInstance).then(function(textPage){
 				        // Show the text of the page in the console
-				        console.log(textPage);
+				        // console.log(textPage);
 				        pushToTheGlobal(pageNumber,textPage);
 				    });
 				    
