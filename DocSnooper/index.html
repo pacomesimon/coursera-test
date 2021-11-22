@@ -49,7 +49,7 @@
 		    });
 		}
 
-		var pageTexts = [];
+		window.pageTexts = [];
 					// var PDF_URL  = '/path/to/example.pdf';
 
 			PDFJS.getDocument(PDF_URL).then(function (PDFDocumentInstance) {
@@ -62,8 +62,8 @@
 				    getPageText(pageNumber , PDFDocumentInstance).then(function(textPage){
 				        // Show the text of the page in the console
 				        // console.log(textPage);
-				        pageTexts[pageNumber] = textPage;
-				        console.log(pageTexts[pageNumber]);
+				        window.pageTexts[pageNumber] = textPage;
+				        console.log(window.pageTexts[pageNumber]);
 				    });
 				}
 			}, function (reason) {
@@ -72,11 +72,11 @@
 			});
 
 
-		console.log(pageTexts);
+		console.log(window.pageTexts);
 		console.log("something is here");
-		console.log(pageTexts[73]);
-		console.log(pageTexts[74]);
-		console.log(pageTexts[75]);
+		console.log(window.pageTexts[73]);
+		console.log(window.pageTexts[74]);
+		console.log(window.pageTexts[75]);
 		//////////////////////document.getElementById('demo').innerHTML = "mi Array" + pageTexts;
 		// var totalPages = pageTexts.length - 1 ;
 		// var textToShow = "<br>";
