@@ -59,13 +59,13 @@
 
 			    for (pageNumber = 1; pageNumber <= totalPages; pageNumber++) { 
 			    // Extract the text
-			    	var textNeeded = "";
+			    	window.textNeeded = "";
 				    getPageText(pageNumber , PDFDocumentInstance).then(function(textPage){
 				        // Show the text of the page in the console
 				        // console.log(textPage);
-				        textNeeded = textPage;
+				        window.textNeeded = textPage;
 				    });
-				    window.pageTexts[pageNumber] = textNeeded;
+				    window.pageTexts[pageNumber] = window.textNeeded;
 				    console.log(window.pageTexts[pageNumber]);
 				}
 			}, function (reason) {
