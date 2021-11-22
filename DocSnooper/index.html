@@ -55,15 +55,20 @@
 			PDFJS.getDocument(PDF_URL).then(function (PDFDocumentInstance) {
 			    
 			    var totalPages = PDFDocumentInstance.numPages;
-			    var pageNumber = 5;
+			    var pageNumber = 1;
 
+			    var pageTexts = [];
+			    var textToShow = "<br>";
+			    for (pageNumber = 1; pageNumber <= totalPages; pageNumber++) { 
 			    // Extract the text
-			    getPageText(pageNumber , PDFDocumentInstance).then(function(textPage){
-			        // Show the text of the page in the console
-			        console.log(textPage);
-			        document.getElementById('demo').innerHTML = textPage ;
-			    });
-
+				    getPageText(pageNumber , PDFDocumentInstance).then(function(textPage){
+				        // Show the text of the page in the console
+				        console.log(textPage);
+				        pageTexts[pageNumber] = textPage;
+				        textToShow = textToShow + "<h1> page " + pageNumber +"</h1> <br>" + textPage + "<br> ===================== <br>";
+				        document.getElementById('demo').innerHTML = textToShow ;
+				    });
+				}
 			}, function (reason) {
 			    // PDF loading error
 			    console.error(reason);
