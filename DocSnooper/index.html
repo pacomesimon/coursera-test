@@ -20,7 +20,7 @@
 	    // Specify the path to the worker
 	    PDFJS.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.246/pdf.worker.min.js';
 
-	    PDFJS.getDocument(urlPDF).then(function (pdf) {
+	    PDFJS.getDocument(PDF_URL).then(function (pdf) {
             var pdfDocument = pdf;
             var pagesPromises = [];
 
