@@ -24,11 +24,11 @@
             var pdfDocument = pdf;
             var pagesPromises = [];
 
-            for (var i = 0; i < pdf.numPages; i++) {
+            for (var i = 1; i <= pdf.numPages; i++) {
                 // Required to prevent that i is always the total of pages
                 (function (pageNumber) {
                     pagesPromises.push(getPageText(pageNumber, pdfDocument));
-                })(i + 1);
+                })(i);
             }
 
             Promise.all(pagesPromises).then(function (pagesText) {
@@ -38,6 +38,7 @@
                 		console.log(pagesText[10]);
                 		console.log(pagesText[70]);
 						console.log(pagesText[71]);
+						console.log(pagesText[72]);
                 		console.log("something is here");
 						console.log(pagesText[73]);
 						console.log(pagesText[74]);
