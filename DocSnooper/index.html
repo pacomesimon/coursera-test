@@ -50,6 +50,11 @@
 		}
 
 		window.pageTexts = [];
+		pushToTheGlobal(pageNumber,textPage){
+			window.pageTexts[pageNumber] = textPage;
+		}
+
+		
 					// var PDF_URL  = '/path/to/example.pdf';
 
 			PDFJS.getDocument(PDF_URL).then(function (PDFDocumentInstance) {
@@ -60,26 +65,25 @@
 			    for (pageNumber = 1; pageNumber <= totalPages; pageNumber++) { 
 			    // Extract the text
 			    	// window.textNeeded = "";
-				    window.textNeeded = getPageText(pageNumber , PDFDocumentInstance).then(function(textPage){
+				    getPageText(pageNumber , PDFDocumentInstance).then(function(textPage){
 				        // Show the text of the page in the console
-				        // console.log(textPage);
-				        return textPage;
+				        console.log(textPage);
+				        pushToTheGlobal(pageNumber,textPage);
 				    });
-				    window.pageTexts[pageNumber] = window.textNeeded;
-				    console.log(window.pageTexts[pageNumber]);
-				    console.log(window.textNeeded);
+				    
 				}
+				console.log(window.pageTexts);
+				console.log("something is here");
+				console.log(window.pageTexts[73]);
+				console.log(window.pageTexts[74]);
+				console.log(window.pageTexts[75]);
 			}, function (reason) {
 			    // PDF loading error
 			    console.error(reason);
 			});
 
 
-		console.log(window.pageTexts);
-		console.log("something is here");
-		console.log(window.pageTexts[73]);
-		console.log(window.pageTexts[74]);
-		console.log(window.pageTexts[75]);
+		
 		//////////////////////document.getElementById('demo').innerHTML = "mi Array" + pageTexts;
 		// var totalPages = pageTexts.length - 1 ;
 		// var textToShow = "<br>";
