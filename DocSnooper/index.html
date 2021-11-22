@@ -44,6 +44,13 @@
 						console.log(pagesText[74]);
 						console.log(pagesText[75]);
 
+				var totalPages = pagesText.length - 1 ;
+				var textToShow = "<br>";
+				for (let i = 1; i <= totalPages ; i++) {
+					textToShow = textToShow + "<h1> page " + i +"</h1> <br>" + pagesText[i] + "<br> ===================== <br>";
+					document.getElementById('demo').innerHTML = textToShow ;
+				}
+
             });
 
         }, function (reason) {
