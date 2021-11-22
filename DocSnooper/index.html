@@ -22,7 +22,7 @@
 
 	    PDFJS.getDocument(PDF_URL).then(function (pdf) {
             var pdfDocument = pdf;
-            var pagesPromises = [];
+            var pagesPromises = [" "];
 
             for (var i = 1; i <= pdf.numPages; i++) {
                 // Required to prevent that i is always the total of pages
