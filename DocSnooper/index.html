@@ -60,10 +60,10 @@
 			    for (pageNumber = 1; pageNumber <= totalPages; pageNumber++) { 
 			    // Extract the text
 			    	// window.textNeeded = "";
-				    getPageText(pageNumber , PDFDocumentInstance).then(function(textPage){
+				    window.textNeeded = getPageText(pageNumber , PDFDocumentInstance).then(function(textPage){
 				        // Show the text of the page in the console
 				        // console.log(textPage);
-				        window.textNeeded = textPage;
+				        return textPage;
 				    });
 				    window.pageTexts[pageNumber] = window.textNeeded;
 				    console.log(window.pageTexts[pageNumber]);
