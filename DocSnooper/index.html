@@ -43,13 +43,40 @@
 						console.log(pagesText[73]);
 						console.log(pagesText[74]);
 						console.log(pagesText[75]);
+					
+				var totalPages = pagesText.length - 1 ; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-				var totalPages = pagesText.length - 1 ;
+					var miQuerryString = "mobile doppler frequency";
+					var miQstrNormalized = miQuerryString.toLocaleLowerCase();
+					var miQstrArr = miQstrNormalized.split(" ");
+
+					var pagesFrequencies = [];
+
+					for (let r = 1; r <= totalPages ; r++) {
+						var pageFreq = 0;
+						for (q in miQstrArr){
+							pageFreq = pageFreq + getIndicesOf(miQstrArr[q], pagesText[r]);
+						}
+						pagesFrequencies[r] = pageFreq;
+						
+					}					
+
+					var freqToShow = "<br>";
+					for (let i = 1; i <= totalPages ; i++) {
+						freqToShow = freqToShow + "<h1> page " + i +", </h1>" + pagesFrequencies[i] + "<br>";
+						document.getElementById('freqdemo').innerHTML = freqToShow ;
+					}
+
+
+
+				
 				var textToShow = "<br>";
 				for (let i = 1; i <= totalPages ; i++) {
 					textToShow = textToShow + "<h1> page " + i +"</h1> <br>" + pagesText[i] + "<br> ===================== <br>";
 					document.getElementById('demo').innerHTML = textToShow ;
 				}
+
+
 
             });
 
@@ -87,6 +114,24 @@
                 });
             });
         }
+
+		function getIndicesOf(searchStr, str, caseSensitive) {
+			var searchStrLen = searchStr.length;
+			if (searchStrLen == 0) {
+				return [];
+			}
+			var startIndex = 0, index, indices = [];
+			if (!caseSensitive) {
+				str = str.toLowerCase();
+				searchStr = searchStr.toLowerCase();
+			}
+			while ((index = str.indexOf(searchStr, startIndex)) > -1) {
+				indices.push(index);
+				startIndex = index + searchStrLen;
+			}
+			// return indices;
+			return indices.length;
+		}
 
 		// /**
 		//  * Retrieves the text of a specif page within a PDF Document obtained through pdf.js 
@@ -162,7 +207,7 @@
 		// }
 
 	</script>
-
+	<p id="freqdemo"></p>
 	<p id="demo"></p>
 </body>
 </html>
