@@ -67,8 +67,9 @@
 
 					for (let i = 1; i <= totalPages ; i++) {
 						var p = i-1;
-						dataToPlot[0][0] = i;
-						dataToPlot[p][1] = pagesFrequencies[i];
+						dataToPlot[p] = [i,pagesFrequencies[i]]
+						// dataToPlot[0][0] = i;
+						// dataToPlot[p][1] = pagesFrequencies[i];
 					}
 
 					anychart.onDocumentReady(function() {
