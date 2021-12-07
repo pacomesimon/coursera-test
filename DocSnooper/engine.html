@@ -22,6 +22,7 @@
             document.getElementById('container').innerHTML = "<h2>Processing your Querry <br> Wait a bit ...<h2>";
             // var PDF_URL = './example.pdf';
             var PDF_URL = document.getElementById('booboo').value;
+            var PDFloco = document.getElementById('booboo').value;
 	    // var PDF_URL = 'https://www.nerldc.in/wp-content/uploads/ISO_14001_2015_EMS.pdf';
 	    // Specify the path to the worker
 	    PDFJS.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.246/pdf.worker.min.js';
@@ -114,7 +115,10 @@
 					chart.draw();
 					var cleanHands = document.getElementsByClassName("anychart-credits");
 					cleanHands[0].innerHTML = " ";
-
+                    
+                    document.getElementById('titlepdf').innerHTML = "See ... The PDF document is loaded below here: ";
+                    document.getElementById('showdata').data = PDFloco;
+                    document.getElementById('showsrc').src = PDFloco;
 					});
 					
 					
@@ -238,7 +242,28 @@
                             </div>
 
                             <div class="col-12">
-                                <h3><a> ... </a><br></h3>
+                                <h3><a id="titlepdf"> ... </a><br></h3>
+                                <object
+                                    id="showdata"
+                                    data=""
+                                    type="application/pdf"
+                                    width="100%"
+                                    height="1000px"
+                                >
+                                    <iframe
+                                        id="showsrc"
+                                        src=""
+                                        width="100%"
+                                        height="1000px"
+                                        style="border: none;"
+                                    >
+                                        <p>
+                                            Your browser does not support PDFs.
+                                            <a href="https://example.com/test.pdf">Download the PDF</a>
+                                            .
+                                        </p>
+                                    </iframe>
+                                </object>
                                 
                                 <hr>
                             </div>
