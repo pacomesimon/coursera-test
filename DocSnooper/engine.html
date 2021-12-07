@@ -19,6 +19,7 @@
 <script>
 	    // Path to PDF file
 	    function mainJob() {
+            document.getElementById('container').innerHTML = "<h2>Processing your Querry <br> Wait a bit ...<h2>";
             // var PDF_URL = './example.pdf';
             var PDF_URL = document.getElementById('booboo').value;
 	    // var PDF_URL = 'https://www.nerldc.in/wp-content/uploads/ISO_14001_2015_EMS.pdf';
@@ -106,6 +107,7 @@
 					chart.animation(true);
 
 					// set the container
+                    document.getElementById('container').innerHTML = " ";
 					chart.container("container");
 
 					// draw the chart
@@ -195,7 +197,7 @@
 	</script>
 
     </head>
-    <body id="page-top" style="padding: 0px 0px 0px 0px; background-color: #bcbcbe">
+    <body id="page-top" style="padding: 0px 0px 0px 0px; background-color: #bcbcbe" >
         <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav" style="padding: 0px 0px 0px; background-color: #0b1020">
             <div class="container" ><a class="navbar-brand js-scroll-trigger" href="./index.html#page-top">© DocSnooper 2021</a>
                 
@@ -223,10 +225,10 @@
                 </div>
             </div>
         </header>
-        <section class="page-section portfolio" id="portfolio" style="padding: 0px 0px 0px;">
-            <div class="container">
+        <section class="page-section portfolio" id="portfolio" style="padding: 0px 0px 0px;" style="background-image: url('dummy.png');">
+            <div class="container" >
                 
-                <div>
+                <div >
                     <form>
                         
                         <div class="row align-items-center" style="padding-top: 1px;">
