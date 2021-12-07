@@ -19,6 +19,8 @@
 <script>
 	    // Path to PDF file
 	    function mainJob() {
+            document.getElementById('showdata').data = "";
+            document.getElementById('showsrc').src = "";
             document.getElementById('container').innerHTML = "<h2>Processing your Querry <br> Wait a bit ...<h2>";
             // var PDF_URL = './example.pdf';
             var PDF_URL = document.getElementById('booboo').value;
@@ -214,7 +216,7 @@
                         <select class="form-control" id="booboo">
                             <!-- <option>Select a Book</option> -->
                             <option value="./proof2.pdf">Selected book: History Book</option>
-                            <option value="./example">A Mobile Telecommunication Lecture Book</option>
+                            <option value="./example.pdf">A Mobile Telecommunication Lecture Book</option>
                         </select>
                     </div>
                     <div class="col-12 col-md-6">
